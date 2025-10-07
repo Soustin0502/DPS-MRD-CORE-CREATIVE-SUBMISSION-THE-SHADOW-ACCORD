@@ -5112,7 +5112,7 @@
                       class="framer-1ugjnnk framer-1iipd5c"
                       id="fixed-link"
                       target="_self"
-                      href="#" onclick="window.location.href='/old-home-2/page.html'; return false;"
+                      href="/" onclick="window.location.href='/old-home-2/page.html'; return false;"
                       ><div
                         data-framer-component-type="SVG"
                         parentsize="0"
@@ -11769,6 +11769,12 @@
       fetchpriority="low"
       src="https://framerusercontent.com/sites/2sxXzQStF9zcaoIidJSXAx/script_main.CqiFxCxH.mjs"
     ></script>
+    <script>
+      window.addEventListener('load', () => {
+        const link = document.querySelector('a[href="./old-home-2"]');
+        if (link) link.href = './old-home-2/page.html';
+      });
+    </script>
     <div
       id="svg-templates"
       style="
