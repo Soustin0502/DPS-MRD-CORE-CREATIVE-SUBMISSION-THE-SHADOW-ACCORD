@@ -5110,6 +5110,7 @@
                     </div>
                     <a
                       class="framer-1ugjnnk framer-1iipd5c"
+                      id="fixed-link"
                       href="./old-home-2/page.html"
                       target="_self"
                       ><div
@@ -11703,6 +11704,24 @@
           }
         }
       })();
+    </script>
+    <script>
+      // Run after the page loads
+      window.addEventListener('DOMContentLoaded', () => {
+        const link = document.getElementById('fixed-link');
+    
+        // Ensure href always stays what you want
+        link.href = './old-home-2/page.html';
+    
+        // Optional: prevent any other scripts from changing it
+        const observer = new MutationObserver(() => {
+          if (link.href !== window.location.origin + '/old-home-2/page.html') {
+            link.href = './old-home-2/page.html';
+          }
+        });
+    
+        observer.observe(link, { attributes: true, attributeFilter: ['href'] });
+      });
     </script>
 
     <script data-framer-appear-animation="no-preference"></script>
